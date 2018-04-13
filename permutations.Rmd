@@ -1,0 +1,56 @@
+---
+title: "Perform permutation test for differences in gene expression"
+output: html_document
+---
+
+Import the mice weights.
+
+```{r import-data}
+weights <- read.delim("/Users/gradstudent/projects/side-projects/mouse-weights/weights.txt",
+                      stringsAsFactors = FALSE)
+head(weights)
+```
+
+Calculate the observed difference in weight between wild type and transgenic
+mice.
+
+```{r observed}
+# Calculate the mean difference in weight between Wild type and Transgenic mice.
+#
+# mouse - character vector of type of mouse: Wild type, Transgenic
+# grams - numeric vector of mouse weights (grams)
+get_diff <- function(mouse, grams) {
+  stopifnot(length(mouse) == length(grams))
+  mean(grams[mouse == "Transgenic"]) / mean(grams[mouse == "Wild type"])
+}
+
+diff_observed <- get_diff(weights$mouse, weights$grams)
+diff_observed
+```
+
+Perform 1000 permutations and calculate the mean difference in each permuted
+data set.
+
+```{r permute}
+n_perms <- 1000
+permutations <- replicate(n = n_perms, expr = sample(weights$mouse),
+                          simplify = FALSE)
+diff_permutations <- vapply(permutations, get_diff, grams = weights$grams,
+                            numeric(1))
+hist(diff_permutations)
+abline(v = diff_observed, col = "red")
+```
+
+Calculate a two-sided permutation-based p-value. In other words, count the
+number of test statistics generated from the permutations with a mean difference
+that is greater in magnitude that the observed difference, and divide by the
+number of permutations.
+
+```{r p-value}
+p_perm <- (sum(diff_permutations <= -abs(diff_observed)) +
+           sum(diff_permutations >= abs(diff_observed))) / length(diff_permutations)
+p_perm
+```
+
+
+The p-value is `r p_perm`.

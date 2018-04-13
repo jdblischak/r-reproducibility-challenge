@@ -1,0 +1,22 @@
+---
+title: "Perform t-test for differences in gene expression"
+output: html_document
+---
+
+Import the mice weights.
+
+```{r import-data}
+weights <- read.delim("/Users/gradstudent/projects/side-projects/mouse-weights/weights.txt",
+                      stringsAsFactors = FALSE)
+head(weights)
+```
+
+Test for a difference in weight between the wild type and transgenic mice using
+a t-test:
+
+```{r t-test}
+result <- t.test(grams ~ mouse, data = weights)
+result
+```
+
+The p-value is `r result$p.value`.

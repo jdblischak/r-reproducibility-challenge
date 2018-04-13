@@ -1,0 +1,31 @@
+---
+title: "Visualize distributions"
+output: html_document
+---
+
+Import the mice weights.
+
+```{r import-data}
+weights <- read.delim("/Users/gradstudent/projects/side-projects/mouse-weights/weights.txt",
+                      stringsAsFactors = FALSE)
+head(weights)
+```
+
+Density plots
+
+```{r density-plots}
+plot(density(weights$grams[weights$mouse == "Wild type"]), xlim = c(15, 30))
+lines(density(weights$grams[weights$mouse == "Transgenic"]), col = "red")
+```
+
+QQ plots
+
+```{r qq-plots}
+qqnorm(weights$grams[weights$mouse == "Wild type"], main = "Wild type")
+qqline(weights$grams[weights$mouse == "Wild type"])
+qqnorm(weights$grams[weights$mouse == "Transgenic"], main = "Transgenic")
+qqline(weights$grams[weights$mouse == "Transgenic"])
+```
+
+**Conclusion:** the weights of the wild type mice appear normally distributed,
+but the weights of the transgenic mice deviate from the normal distribution.
