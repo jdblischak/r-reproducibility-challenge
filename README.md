@@ -51,7 +51,7 @@ library("rmarkdown")
 render("visualize.Rmd")
 ```
 
-What errors do you get? How can you fix them?
+What errors prevented the code from running? How can you fix them?
 
 ### 2. Organize the files
 
@@ -75,7 +75,9 @@ page of your website, so write a brief note about the project.
 Second, create a file in `analysis` called `_site.yml` to configure the website.
 Save the output in the root of the project in a directory called `docs` (hint:
 the path needs to be relative to the location of the `_site.yml`, so you'll need
-to use `..`). Also, create links in the navigation bar to the 3 different analyses.
+to use `..`). Also, create links in the navigation bar to the 3 different
+analyses. Copy the template below into `analysis/_site.yml`, replacing the ___
+with the necessary directory or filename.
 
 ```
 name: "rotation-project"
