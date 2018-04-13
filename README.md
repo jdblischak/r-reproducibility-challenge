@@ -59,7 +59,9 @@ Create two new directories: `analysis` and `data` (use `dir.create()`, `mkdir`
 in the Terminal, or the RStudio files pane). Move the R Markdown files to
 `analysis` and the data file to `data` (use `file.rename()`, `mv` in the
 Terminal, or the RStudio files pane). Make sure to update the file paths! Hint:
-`..` is the shortcut for the directory up one.
+`..` is the shortcut for the directory up one. Use the RStudio Knit button or
+`render()` to confirm you can run the code in each of the files after updating
+the file paths.
 
 ### 3. Make it a website
 
@@ -70,7 +72,23 @@ interconnected website ([documentation][]).
 [documentation]: https://rmarkdown.rstudio.com/rmarkdown_websites.html
 
 First, create a file in `analysis` called `index.Rmd`. This is the main landing
-page of your website, so write a brief note about the project.
+page of your website, so write a brief note about the project. Copy the template
+below as a starting point. It uses [Markdown syntax][md] to create hyperlinks to
+the other analyses.
+
+[md]: https://guides.github.com/features/mastering-markdown/
+
+```
+---
+title: "Home"
+output: html_document
+---
+
+Are transgenic mice bigger or smaller than wild type mice? The weights of 30
+wild type and 30 transgenic mice were [visualized](visualize.html) and assessed
+for statistically significant differences using a [t-test](t-test.html) and via
+[permutations](permutations.html).
+```
 
 Second, create a file in `analysis` called `_site.yml` to configure the website.
 Save the output in the root of the project in a directory called `docs` (hint:
@@ -109,4 +127,5 @@ work?
 ### 4. Make the permutation-based p-value reproducible
 
 When you run permutations.Rmd, do you get a p-value of 0.011. Why not? How can
-you improve the analysis to make the p-value reproducible?
+you improve the analysis to make the p-value reproducible? Are you able to
+obtain the same result each time you re-run the code?
