@@ -29,8 +29,6 @@ confirm you get the same result?
 
 1. Click [here][zip] to download the project as a zip file
 
-[zip]: https://github.com/jdblischak/r3cr-reproducibility-challenge/archive/master.zip
-
 1. Extract the files using `unzip` in the Terminal or using the archival
 software available on your computer (e.g. Archive Utility on macOS, 7zip on
 Windows). On Windows 10, right-click on the zip file and select "Extract
@@ -38,6 +36,15 @@ All...".
 
 1. Double-click on the the file `r3cr-reproducibility-challenge.Rproj` to open
 the project in RStudio
+
+1. Install [rmarkdown][]
+
+    ```
+    install.packages("rmarkdown")
+    ```
+
+[zip]: https://github.com/jdblischak/r3cr-reproducibility-challenge/archive/master.zip
+[rmarkdown]: https://rmarkdown.rstudio.com/
 
 ## Challenges
 
