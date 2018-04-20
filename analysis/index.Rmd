@@ -1,0 +1,9 @@
+---
+title: "Home"
+output: html_document
+---
+
+Are transgenic mice bigger or smaller than wild type mice? The weights of 30
+wild type and 30 transgenic mice were [visualized](visualize.html) and assessed
+for statistically significant differences using a [t-test](t-test.html) and via
+[permutations](permutations.html).

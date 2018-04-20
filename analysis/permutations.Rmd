@@ -3,10 +3,16 @@ title: "Perform permutation test for differences in gene expression"
 output: html_document
 ---
 
+Set a seed to make the permutation analysis reproducible.
+
+```{r seed}
+set.seed(9)
+```
+
 Import the mice weights.
 
 ```{r import-data}
-weights <- read.delim("/Users/gradstudent/projects/side-projects/mouse-weights/weights.txt",
+weights <- read.delim("../data/weights.txt",
                       stringsAsFactors = FALSE)
 head(weights)
 ```

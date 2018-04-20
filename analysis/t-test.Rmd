@@ -6,7 +6,7 @@ output: html_document
 Import the mice weights.
 
 ```{r import-data}
-weights <- read.delim("/Users/gradstudent/projects/side-projects/mouse-weights/weights.txt",
+weights <- read.delim("../data/weights.txt",
                       stringsAsFactors = FALSE)
 head(weights)
 ```

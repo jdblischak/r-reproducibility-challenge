@@ -1,0 +1,13 @@
+name: "rotation-project"
+output_dir: ../docs
+navbar:
+  title: "Rotation Project"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Visualize"
+      href: visualize.html
+    - text: "t-test"
+      href: t-test.html
+    - text: "Permutations"
+      href: permutations.html
