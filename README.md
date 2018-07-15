@@ -1,9 +1,4 @@
-# R3CR Reproducibility Challenge
-
-2018-04-17
-
-This excise was part of the University of Chicago course: Responsible,
-rigorous and reproducible conduct of research (R3CR).
+# R Reproducibility Challenge
 
 For this challenge, imagine you have been given a small project at the start of
 your lab rotation. Your first task is to reproduce the results and organize the
@@ -34,7 +29,7 @@ software available on your computer (e.g. Archive Utility on macOS, 7zip on
 Windows). On Windows 10, right-click on the zip file and select "Extract
 All...".
 
-1. Double-click on the the file `r3cr-reproducibility-challenge.Rproj` to open
+1. Double-click on the the file `r-reproducibility-challenge.Rproj` to open
 the project in RStudio
 
 1. Install [rmarkdown][]
@@ -43,7 +38,7 @@ the project in RStudio
     install.packages("rmarkdown")
     ```
 
-[zip]: https://github.com/jdblischak/r3cr-reproducibility-challenge/archive/master.zip
+[zip]: https://github.com/jdblischak/r-reproducibility-challenge/archive/master.zip
 [rmarkdown]: https://rmarkdown.rstudio.com/
 
 ## Challenges
