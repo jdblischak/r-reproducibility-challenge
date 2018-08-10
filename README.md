@@ -1,5 +1,9 @@
 # R Reproducibility Challenge
 
+* [Setup](#setup)
+* [Challenges](#challenges)
+* [Legal](#legal)
+
 For this challenge, imagine you have been given a small project at the start of
 your lab rotation. Your first task is to reproduce the results and organize the
 project files. The instructions left to you by the former postdoc are below.
@@ -131,3 +135,21 @@ work?
 When you run permutations.Rmd, do you get a p-value of 0.011. Why not? How can
 you improve the analysis to make the p-value reproducible? Are you able to
 obtain the same result each time you re-run the code?
+
+## Legal
+
+The original version of this material was created and taught on 2018-04-17 as
+part of the course "Responsible, rigorous and reproducible conduct of research"
+at the University of Chicago.
+
+This material is based upon work supported by the National Science Foundation
+under Grant Number 1734818.
+
+"Any opinions, findings, and conclusions or recommendations expressed in this
+material are those of the author(s) and do not necessarily reflect the views of
+the National Science Foundation."
+
+All material in this repository is licensed under the
+[CC0](https://creativecommons.org/publicdomain/zero/1.0/legalcode.txt) license,
+which means you are free to modify and distribute without any acknowledgement.
+See the file `LICENSE` for the full license text.
